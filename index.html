@@ -4,10 +4,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Headphones Landing</title>
 </head>
 <body>
-    
+    <!-- Header-->
+    <header>
+        <a href="#" class="logo"><i class='bx bx-headphone'></i>SoundBits</a>
+        <ul class="nav">
+            <li><a href="#" class="active">Overview</a></li>
+            <li><a href="#" >Tech Specs</a></li>
+            <li><a href="#" >Reviews</a></li>
+            <li><a href="#" >Contact</a></li>
+        </ul>
+        <div class="header-icons">
+            <i class='bx bxs-cart-alt' ></i>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <!--content-->
+    <section class="content">
+        <div class="content-img">
+            <img src="assets/product1.png" alt="product1" class="one"> 
+        </div>
+
+        <div class="content-text">
+            <h1>SoundBits <br> Headphones </h1>
+            <h5> Every sound, clear as crystal</h5>
+            <h3>$199.99</h3>
+            <a href="#" class="btn">Order Now</a>
+        </div>
+    </section>
+
+    <div class="main">
+        <div class="row">
+            <li><img src="assets/main1.png" alt="variation1" onclick="slider('assets/product1.png')"></li>
+        </div>
+
+        <div class="row row2">
+            <li><img src="assets/main2.png" alt="variation2" onclick="slider('assets/product2.png')"></li>
+        </div>
+
+        <div class="row row3">
+            <li><img src="assets/main3.png" alt="variation3" onclick="slider('assets/product3.png')"></li>
+        </div>
+    </div>
+    <a href="#" class="bottom">Scroll Down <i class='bx bx-down-arrow-circle'></i></a>
+
+
+    <script type="text/javascript">
+        function slider(anything){
+            document.querySelector('.one').src = anything;
+        };
+
+        let menu = document.querySelector('#menu-icon');
+        let nav = document.querySelector('.nav');
+
+        menu.onclick = () => {
+            menu.classList.toggle('bx-x')
+            nav.classList.toggle('open')
+        }
+    </script>
 </body>
 </html>
